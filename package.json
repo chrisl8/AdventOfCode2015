@@ -1,0 +1,24 @@
+{
+  "name": "adventofcode2015",
+  "version": "1.0.0",
+  "private": true,
+  "description": "These are my programs in JavaScript using node.js to solve the 2015 [Advent of Code](http://adventofcode.com/) puzzles.",
+  "main": "day1partA.js",
+  "dependencies": {
+    "md5": "^2.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrisl8/AdventOfCode2015.git"
+  },
+  "author": "ChrisL8",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chrisl8/AdventOfCode2015/issues"
+  },
+  "homepage": "https://github.com/chrisl8/AdventOfCode2015#readme"
+}
