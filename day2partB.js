@@ -7,17 +7,13 @@ var input = fs.readFileSync(filename, 'utf8');
 
 var boxSideLengthList = input.split('\n');
 
-function doubleTheSides(sideArea) {
-    return sideArea * 2;
-}
-
 function getRequiredRibbonForOneBox(sideList) {
     let thisBoxSides = sideList.split('x');
-    thisBoxSides.sort(function(a, b) {
+    thisBoxSides.sort(function (a, b) {
         return a - b;
     });
     let ribbonRequiredForTheBox = (thisBoxSides[0] * 2) + (thisBoxSides[1] * 2);
-    let ribbonRequiredForTheBow = thisBoxSides.reduce(function(previousValue, currentValue, currentIndex, array) {
+    let ribbonRequiredForTheBow = thisBoxSides.reduce(function (previousValue, currentValue) {
         return previousValue * currentValue;
     });
     return ribbonRequiredForTheBox + ribbonRequiredForTheBow;
@@ -25,7 +21,7 @@ function getRequiredRibbonForOneBox(sideList) {
 
 var ribbonRequiredPerBox = boxSideLengthList.map(getRequiredRibbonForOneBox);
 
-var totalRibbonToOrder = ribbonRequiredPerBox.reduce(function(previousValue, currentValue, currentIndex, array) {
+var totalRibbonToOrder = ribbonRequiredPerBox.reduce(function (previousValue, currentValue) {
     return previousValue + currentValue;
 });
 
